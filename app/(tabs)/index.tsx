@@ -70,7 +70,7 @@ const MainView = () => {
               <View
                 style={{
                   backgroundColor: "#fff",
-                  marginTop: 12,
+                  paddingTop: 12,
                   display: "flex",
                   gap: 12,
                 }}

@@ -18,7 +18,7 @@ export function Collapsible({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <ThemedView>
+    <ThemedView lightColor="#F8F8F8">
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.heading}
