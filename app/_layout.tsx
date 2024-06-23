@@ -1,16 +1,24 @@
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Feather from "@expo/vector-icons/Feather";
+import React, { Fragment, useEffect } from "react";
 import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
-import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
-import "react-native-reanimated";
-
-import { useColorScheme } from "@/hooks/useColorScheme";
-import MainView from "./(tabs)";
+  View,
+  Text,
+  StyleSheet,
+  StatusBar,
+  Platform,
+  SafeAreaView,
+  Image,
+} from "react-native";
+import { StatusBarProps } from "expo-status-bar";
+import Navbar from "@/components/Navbar";
+import Waves from "@/components/Waves";
+import { Collapsible } from "@/components/Collapsible";
+import { QRCodeComponent } from "@/components/QRView";
+import CurrentTime from "@/components/CurrentTime";
+import { SplashScreen, Stack } from "expo-router";
+import { useColorScheme } from "@/hooks/useColorScheme.web";
+import { useFonts } from "expo-font/build/FontHooks";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -31,5 +39,9 @@ export default function RootLayout() {
     return null;
   }
 
-  return <MainView />;
+  return (
+    <Stack screenOptions={{ header: () => null }}>
+      <Stack.Screen name="(tabs)" />
+    </Stack>
+  );
 }

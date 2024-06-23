@@ -11,7 +11,7 @@ export default function Waves() {
     const createAnimation = (animatedValue, direction) => {
       return Animated.loop(
         Animated.timing(animatedValue, {
-          toValue: direction === "left" ? -100 : 100,
+          toValue: direction === "left" ? -50 : 50,
           duration: 5000,
           easing: Easing.linear,
           useNativeDriver: true,
@@ -27,13 +27,13 @@ export default function Waves() {
 
   return (
     <View style={styles.container}>
-      <View>
+      <View style={{zIndex: 50}}>
         <Animated.Image
           source={require("@/assets/images/app per persone oneste/pallini-blu-chiaro-3.png")}
           style={[styles.image, { transform: [{ translateX: translateX1 }] }]}
         />
       </View>
-      <View style={{ marginTop: -12 }}>
+      <View style={{ marginTop: -12, zIndex: 60 }}>
         <Animated.Image
           source={require("@/assets/images/app per persone oneste/pallini-blu-chiaro-2.png")}
           style={[
@@ -43,14 +43,14 @@ export default function Waves() {
         />
       </View>
 
-      <View style={{ marginTop: -12 }}>
+      <View style={{ marginTop: -12, zIndex: 70}}>
         <Animated.Image
           source={require("@/assets/images/app per persone oneste/pallini-blu-chiaro.png")}
           style={[styles.image, { transform: [{ translateX: translateX3 }] }]}
         />
       </View>
 
-      <View style={{ marginTop: -12 }}>
+      <View style={{ marginTop: -12, zIndex: 80}}>
         <Animated.Image
           source={require("@/assets/images/app per persone oneste/pallini-bianchi.png")}
           style={[styles.image, { transform: [{ translateX: translateX4 }] }]}

@@ -1,0 +1,8 @@
+export enum TicketDuration {
+  NINETY_MINUTES,
+  ONE_HUNDRED_MINUTES,
+  SIX_HOURS,
+  DAILY,
+  THREE_DAYS,
+  FIVE_DAYS,
+}
